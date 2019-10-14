@@ -1,0 +1,79 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et_alias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入别名" />
+
+    <EditText
+        android:id="@+id/et_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入账号" />
+
+    <EditText
+        android:id="@+id/et_subscribe_topic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入tag" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/set_alias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/all_btn"
+            android:text="设置唯一标示"
+            android:textSize="@dimen/text_btn_size" />
+
+        <Button
+            android:id="@+id/unset_alias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/all_btn"
+            android:text="取消设置"
+            android:textSize="@dimen/text_btn_size" />
+        <Button
+            android:id="@+id/stop_push"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/all_btn"
+            android:text="暂停推送"
+            android:textSize="@dimen/text_btn_size" />
+        <Button
+            android:id="@+id/restart_push"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/all_btn"
+            android:text="重新启动推送"
+            android:textSize="@dimen/text_btn_size" />
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="10dp"
+        android:scrollbars="vertical">
+
+        <TextView
+            android:id="@+id/log"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:singleLine="false"
+            android:textSize="@dimen/text_size" />
+    </ScrollView>
+
+</LinearLayout>
