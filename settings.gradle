@@ -1,2 +1,3 @@
+include ':mPush'
 include ':app'
 rootProject.name='pushdemo'
