@@ -8,7 +8,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.0'
-        
+        classpath 'com.novoda:bintray-release:0.9'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -24,4 +24,13 @@ allprojects {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+ext{
+    Properties properties = new Properties()
+    properties.load(file('local.properties').newDataInputStream())
+    bintrayUser = properties.getProperty("bintray.user")
+    bintrayKey = properties.getProperty("bintray.apikey")
+    siteUrl = 'https://github.com/mtcle/pushdemo' //项目在github主页地址
+    gitUrl = 'https://github.com/mtcle/pushdemo.git'   //Git仓库的地址
+    groupId='com.mtcle.mpush'//groupid，第一个冒号前的 eg, com.google.code.gson:gson:2.8.5
 }

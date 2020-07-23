@@ -40,3 +40,12 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
 }
+
+//------------------------上传maven仓库配置开始-----------------------------
+ext {
+    versionFromModule = '0.0.1'//版本号
+    artifactIdModule = 'mpush'//module名称
+    descModule = 'android fast push module'
+}
+apply from: '../build_publish_new.gradle'
+//------------------上传maven仓库配置结束------------------------

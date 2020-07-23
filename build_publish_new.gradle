@@ -1,0 +1,30 @@
+apply plugin: 'com.novoda.bintray-release'//添加
+//添加
+def libName = artifactIdModule
+def version = versionFromModule
+def descLib = descModule
+publish {
+    groupId = project.groupId//jcenter上的路径
+    artifactId = libName//项目名称
+    publishVersion = version//版本号
+    bintrayUser = project.bintrayUser   //bintray.com用户名
+    bintrayKey = project.bintrayKey  //bintray.com apikey
+    dryRun = false
+    userOrg = 'mtcle'//bintray.com用户名
+    desc = descLib//描述，不重要
+    website = project.siteUrl//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
+
+}
+//推送指令
+//gradlew clean build bintrayUpload
+task aUpload2Jcenter(dependsOn: ['clean', 'build', 'bintrayUpload']) {
+    doLast {
+        System.out.println("----------------发布完成-----------------")
+    }
+}
+
+//android {
+//    lintOptions {
+//        abortOnError false
+//    }
+//}
